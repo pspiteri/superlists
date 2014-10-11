@@ -21,6 +21,7 @@ class NewVisitorTest(LiveServerTestCase):
     def test_can_start_a_list_and_retrieve_it_later(self):
         # Edith has heard about a cool new online to-do app. She goes
         # to check out its homepage
+        # to check out its homepage
         self.browser.get(self.live_server_url)
 
         # She notices the page title and header mention to-do lists
@@ -52,7 +53,7 @@ class NewVisitorTest(LiveServerTestCase):
         inputbox.send_keys('Use peacock feathers to make a fly')
         inputbox.send_keys(Keys.ENTER)
 
-        time.sleep(5)
+        time.sleep(2)
 
         # The page updates again, and now shows both items on her list
         self.check_for_row_in_list_table('1: Buy peacock feathers')
@@ -78,7 +79,7 @@ class NewVisitorTest(LiveServerTestCase):
         inputbox.send_keys('Buy milk')
         inputbox.send_keys(Keys.ENTER)
 
-        time.sleep(5)
+        time.sleep(2)
 
         # Francis gets his own unique URL
         francis_list_url = self.browser.current_url
